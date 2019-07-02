@@ -3,8 +3,8 @@ Code book
 
 
 
-subject
-activity
+#subject
+#activity
 tBodyAccMEANX
 tBodyAccMEANY
 tBodyAccMEANZ
