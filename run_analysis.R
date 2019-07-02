@@ -102,3 +102,13 @@ names(data) <- gsub("-", "", names(data))
 # subject activity variables(?) (should be 180 rows)
 data_aggregated <- aggregate(data, by = list(data$subject, data$activity), FUN = mean, na.rm = TRUE)
 names(data_aggregated)[1:2] <- c("subject", "activity")
+
+
+
+
+
+#########################################
+####### Export tidy dataset #############
+#########################################
+
+write.table(data_aggregated, "tidydata.txt", row.names = FALSE, quote = FALSE)
