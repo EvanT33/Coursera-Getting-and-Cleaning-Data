@@ -45,4 +45,14 @@ names(data)[564] <- "label"
 
 
 
+# Keep only desired variables (mean and std variables) ### KEEP ACTIVITY AND SUBJECT NAMES ####
+data <- data[ ,grep(".*mean.*|.*std.*", names(data))]
+
+
+# Rename columns with descriptive variable names
+names(data) <- gsub("std", "STD", names(data))
+names(data) <- gsub("mean", "MEAN", names(data))
+names(data) <- gsub("-", "", names(data))
+names(data) <- gsub("[()]", "", names(data))
+
 
